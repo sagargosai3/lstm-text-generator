@@ -12,6 +12,7 @@ def load_data(file_path):
     # Remove punctuation
     text = text.translate(str.maketrans('', '', string.punctuation))
     words = text.split()
+    words = words[:50000]
 
     print(f"Total words: {len(words)}")
     return words
@@ -136,3 +137,4 @@ if __name__ == "__main__":
     )
 
     print("\nGenerated Text:\n", result)
+    
